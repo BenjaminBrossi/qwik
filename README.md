@@ -161,3 +161,11 @@ Notice that you might need a [Vercel account](https://docs.Vercel.com/get-starte
 The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
 
 You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+
+## Google Cloud Run Server
+
+This app has a minimal [Cloud Run server](https://cloud.google.com/run) implementation. After running a full build, deploy your app with:
+
+```
+pnpm deploy
+```
