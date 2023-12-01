@@ -5,25 +5,25 @@ import { useAuthSignin } from "./plugin@auth";
 export default component$(() => {
   const { submit } = useAuthSignin();
   return (
-    <div class="prose bg-accent mx-auto w-96">
-      <h1 class="">Chat</h1>
-      <p class="text-red-500">Please sign in</p>
-      <button
-        class="btn btn-primary"
-        onClick$={() => submit({ providerId: "google" })}
-      >
-        signin
-      </button>
+    <div class="h-screen max-h-screen overflow-hidden py-10">
+      <div class="prose mx-auto flex max-h-full flex-col rounded-md bg-amber-100  p-4">
+        <div class="flex justify-between">
+          <h1 class="">Joke-Chat</h1>
+        </div>
+        <p class="text-center">Please sign in</p>
+        <div class="flex justify-end">
+          <button
+            class="btn btn-primary"
+            onClick$={() => submit({ providerId: "google" })}
+          >
+            Signin
+          </button>
+        </div>
+      </div>
     </div>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
+  title: "Qwik demo",
 };

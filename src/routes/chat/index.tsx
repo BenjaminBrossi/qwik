@@ -40,7 +40,7 @@ export default component$(() => {
 
   return (
     <div class="flex flex-col justify-between">
-      <div class="my-4 max-h-[65vh] min-h-[20rem] flex-1 overflow-scroll rounded-md bg-amber-50 p-4">
+      <div class="my-4 max-h-[65vh] min-h-[20rem] flex-1 overflow-scroll rounded-md bg-slate-50 p-4">
         {chatHistory.list.map(({ author, text }) => (
           <div
             key={`${author}${text}`}
@@ -56,7 +56,7 @@ export default component$(() => {
             {author === "cpu" && (
               <div class="chat-footer opacity-50">
                 <button
-                  class="btn btn-link m-0 h-3 min-h-0 border-0 p-0"
+                  class="btn btn-link text-primary-content m-0 h-3 min-h-0 border-0 p-0"
                   onClick$={async () =>
                     await saveJoke(value?.user?.email || "", text)
                   }
@@ -70,13 +70,13 @@ export default component$(() => {
       </div>
       <div class="flex justify-end gap-4">
         <button
-          class="btn btn-outline"
+          class="btn btn-warning"
           onClick$={() => submit({ callbackUrl: "/" })}
         >
           Logout
         </button>
         <button
-          class="btn btn-outline btn-primary"
+          class="btn btn-primary"
           onClick$={async () => {
             chatHistory.list.push({ author: "me", text: "Tell me a joke" });
             const { setup, punchline } = await getJoke();

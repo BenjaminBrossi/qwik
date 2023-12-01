@@ -20,7 +20,7 @@ export default component$(() => {
 
   return (
     <div class="h-screen max-h-screen overflow-hidden py-10">
-      <div class="prose bg-neutral text-neutral-content mx-auto flex max-h-full flex-col rounded-md p-4">
+      <div class="prose text-neutral-content mx-auto flex max-h-full flex-col rounded-md bg-amber-100 p-4">
         <div class="flex justify-between">
           <h1>Private</h1>
           <figcaption>{value?.user?.name}</figcaption>

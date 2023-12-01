@@ -44,7 +44,7 @@ export default component$(() => {
 
   return (
     <div class="flex flex-col justify-between">
-      <div class="my-4 max-h-[65vh] min-h-[20rem] flex-1 overflow-scroll rounded-md bg-amber-50 p-4">
+      <div class="my-4 max-h-[65vh] min-h-[20rem] flex-1 overflow-scroll rounded-md bg-slate-50 p-4">
         {archive.value.map((joke) => (
           <div key={`${joke}`} class={`chat chat-start`}>
             <div class={`chat-bubble chat-bubble-primary whitespace-pre-line`}>
@@ -55,13 +55,13 @@ export default component$(() => {
       </div>
       <div class="flex justify-end gap-4">
         <button
-          class="btn btn-outline"
+          class="btn btn-warning"
           onClick$={() => submit({ callbackUrl: "/" })}
         >
           Logout
         </button>
         <button
-          class="btn btn-outline btn-error"
+          class="btn btn-error"
           onClick$={async () => {
             emptyArchive(value?.user?.email || "");
             nav("/chat/archive", { forceReload: true });
